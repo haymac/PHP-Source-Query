@@ -384,7 +384,7 @@
 				throw new InvalidPacketException( 'GetPlayers: Packet header mismatch. (0x' . DecHex( $Type ) . ')', InvalidPacketException::PACKET_HEADER_MISMATCH );
 			}
 			
-			$Players = [];
+			$Players = array();
 			$Count   = $Buffer->GetByte( );
 			
 			while( $Count-- > 0 && $Buffer->Remaining( ) > 0 )
@@ -428,7 +428,7 @@
 				throw new InvalidPacketException( 'GetRules: Packet header mismatch. (0x' . DecHex( $Type ) . ')', InvalidPacketException::PACKET_HEADER_MISMATCH );
 			}
 			
-			$Rules = [];
+			$Rules = array();
 			$Count = $Buffer->GetShort( );
 			
 			while( $Count-- > 0 && $Buffer->Remaining( ) > 0 )
