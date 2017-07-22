@@ -55,7 +55,7 @@
 			}
 			else if( $Header === -2 ) // Split packet
 			{
-				$Packets      = [];
+				$Packets      = array();
 				$IsCompressed = false;
 				$ReadMore     = false;
 				
@@ -94,7 +94,7 @@
 						}
 					}
 					
-					$Packets[ $PacketNumber ] = $Buffer->Get( );
+					$Packets[$PacketNumber] = $Buffer->Get( );
 					
 					$ReadMore = $PacketCount > sizeof( $Packets );
 				}
